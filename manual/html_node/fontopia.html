@@ -1,0 +1,191 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<!-- This manual is for fontopia - the console font editor (version 1.2).
+
+Copyright (C) 2015, 2016 Mohammed Isam.
+
+Permission is granted to copy, distribute and/or modify this document
+under the terms of the GNU Free Documentation License, Version 1.3 or
+any later version published by the Free Software Foundation; with no
+Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
+Texts.  A copy of the license is included in the section entitled
+"GNU Free Documentation License".
+ -->
+<!-- Created by GNU Texinfo 6.0, http://www.gnu.org/software/texinfo/ -->
+<head>
+<title>fontopia version 1.2: fontopia</title>
+
+<meta name="description" content="fontopia version 1.2: fontopia">
+<meta name="keywords" content="fontopia version 1.2: fontopia">
+<meta name="resource-type" content="document">
+<meta name="distribution" content="global">
+<meta name="Generator" content="makeinfo">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link href="index.html#Top" rel="start" title="Top">
+<link href="Index.html#Index" rel="index" title="Index">
+<link href="index.html#SEC_Contents" rel="contents" title="Table of Contents">
+<link href="index.html#Top" rel="up" title="Top">
+<link href="GNU-Free-Documentation-License.html#GNU-Free-Documentation-License" rel="next" title="GNU Free Documentation License">
+<link href="index.html#Top" rel="prev" title="Top">
+<style type="text/css">
+<!--
+a.summary-letter {text-decoration: none}
+blockquote.indentedblock {margin-right: 0em}
+blockquote.smallindentedblock {margin-right: 0em; font-size: smaller}
+blockquote.smallquotation {font-size: smaller}
+div.display {margin-left: 3.2em}
+div.example {margin-left: 3.2em}
+div.lisp {margin-left: 3.2em}
+div.smalldisplay {margin-left: 3.2em}
+div.smallexample {margin-left: 3.2em}
+div.smalllisp {margin-left: 3.2em}
+kbd {font-style: oblique}
+pre.display {font-family: inherit}
+pre.format {font-family: inherit}
+pre.menu-comment {font-family: serif}
+pre.menu-preformatted {font-family: serif}
+pre.smalldisplay {font-family: inherit; font-size: smaller}
+pre.smallexample {font-size: smaller}
+pre.smallformat {font-family: inherit; font-size: smaller}
+pre.smalllisp {font-size: smaller}
+span.nocodebreak {white-space: nowrap}
+span.nolinebreak {white-space: nowrap}
+span.roman {font-family: serif; font-weight: normal}
+span.sansserif {font-family: sans-serif; font-weight: normal}
+ul.no-bullet {list-style: none}
+-->
+</style>
+
+
+</head>
+
+<body lang="en">
+<a name="fontopia"></a>
+<div class="header">
+<p>
+Next: <a href="GNU-Free-Documentation-License.html#GNU-Free-Documentation-License" accesskey="n" rel="next">GNU Free Documentation License</a>, Previous: <a href="index.html#Top" accesskey="p" rel="prev">Top</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Index.html#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+<hr>
+<a name="the-console-font-editor"></a>
+<h2 class="chapter">1 the console font editor</h2>
+<a name="index-the-console-font-editor"></a>
+
+<a name="About-fontopia"></a>
+<h3 class="section">1.1 About fontopia</h3>
+<a name="index-About-fontopia"></a>
+<p>Fontopia is an easy-to-use, text-based, console font editor.
+What this means in simple English is that you can edit the fonts
+that your GNU/Linux kernel is using to display your text on
+text-based (vs graphical) terminals.
+<br>
+Unlike other console text editors which usually work on one PSF
+version, or work on unicode tables only, or allow very minimal glyph
+editing, fontopia provides all these functions together:
+</p>
+<ul class="no-bullet">
+<li>- It works on both PSF 1 &amp; 2, you can even change file type and save it to 
+disk in the other version.
+</li><li>- It allows exporting and importing of unicode tables from external files.
+</li><li>- It provides a user-friendly, easy-to-use glyph editor.
+</li><li>- It can easily change font metrics, e.g. length, width, height...
+</li></ul>
+<br>
+
+<p>Console font files are commonly of PSF type (of which there are two
+versions), or of CP type (legacy fonts). Fontopia works with PSF files
+of both versions, as well as CP fonts, BDF files and raw font files.
+</p>
+<a name="Supported-formats_003a"></a>
+<h3 class="section">1.2 Supported formats:</h3>
+<a name="index-Supported-formats_003a"></a>
+<ul class="no-bullet">
+<li>- PSF 1 and 2
+</li><li>- Linux Code pages (CP)
+</li><li>- Raw fonts
+</li><li>- BDF fonts (beta)
+</li><li>- PCF font and Windows FON files support are under development
+</li></ul>
+
+<a name="WARNING_003a"></a>
+<h3 class="section">1.3 WARNING:</h3>
+<a name="index-WARNING_003a"></a>
+<p>There is one downside currently: fontopia doesn&rsquo;t work with unicode
+sequences properly (at least not in all cases). If you export a unicode
+table, edit it, and then import it to another file, you should be safe.
+</p>
+
+<a name="Navigation"></a>
+<h3 class="section">1.4 Navigation</h3>
+<a name="index-Navigation"></a>
+<p>Using the editor is very easy:
+</p>
+<ol>
+<li> Navigate the glyphs on the right side window using the arrow keys.
+Edit a single glyph using ENTER (or TAB).
+</li><li> Navigate the bits that form a single bit (on the left side window)
+using arrow keys. Press ENTER or SPACE to set/unset the desired bit. Go 
+back to right window (glyph list) using TAB.
+</li><li> To zoom in (make the glyph on the left look bigger), press Z.
+</li><li> To zoom out, press X.
+</li><li> To open a new file, press CTRL+O.
+</li><li> To create a new font from scratch, press CTRL+N.
+</li><li> To save your work, press CTRL+S.
+</li><li> To save with a new filename, press CTRL+D (aka Save As..).
+</li><li> To quit the editor, press CTRL+Q.
+</li><li> To show help, press CTRL+H.
+</li><li> To copy a glyph, press CTRL+C.
+</li><li> To cut a glyph, press CTRL+X.
+</li><li> To paste a glyph, press CTRL+V.
+</li><li> To show about dialog box, press A.
+</li><li> To switch buffer mode (on/off), press CTRL+B.
+</li><li> To clear a glyph (i.e. remove all bits), press C.
+</li><li> To invert a glyph, press D.
+</li><li> To export font unicode table (by default to a file with same original 
+file name plus .tab extension), press E.
+</li><li> To flip a glyph horizontally, press H.
+</li><li> To import unicode table from another file, press I.
+</li><li> To show these keys without the extra jargon, press K.
+</li><li> To show font metrics window, press M.
+</li><li> To change codepage of a CP font, press P.
+If font is in BDF format, P shows properties (or metadata).
+</li><li> To remove unicode table from font, press CTRL+R.
+</li><li> To set a glyph (i.e. set all bits), press S.
+</li><li> To show font unicode table, press U.
+</li><li> To flip a glyph vertically, press V.
+</li><li> To export font glyphs in textual format (by default to a file with
+same original file name plus .glyph extension), press W.
+</li></ol>
+<br>
+
+<p>The unicode values that are mapped to a specific glyph are shown on the
+status bar (the bottom strip) to the right side.
+<br>
+</p>
+<p>That should make you ready to move around and edit your fonts. Have fun!.
+</p>
+
+<a name="Buffer-mode"></a>
+<h3 class="section">1.5 Buffer mode</h3>
+<a name="index-Buffer-mode"></a>
+<p>We know editing font files is a delicate and error-prone task, more so when
+working with small tiny fragile things like console fonts. For this we added
+buffering functionality to fontopia.<br>
+What the buffer is, simply, a way to do all your work on your font, editing
+and cutting and scaling and whatsoever, and saving the font with the same
+name you intended to, but adding a tilde &rsquo;~&rsquo; to the end, same like backup
+files used by other programs (like gedit for example).<br>
+When you are happy with your work and you want to transfer it to the final
+font file, turn off buffering mode and hit ^S and your file will be saved.
+</p>
+
+
+<hr>
+<div class="header">
+<p>
+Next: <a href="GNU-Free-Documentation-License.html#GNU-Free-Documentation-License" accesskey="n" rel="next">GNU Free Documentation License</a>, Previous: <a href="index.html#Top" accesskey="p" rel="prev">Top</a>, Up: <a href="index.html#Top" accesskey="u" rel="up">Top</a> &nbsp; [<a href="index.html#SEC_Contents" title="Table of contents" rel="contents">Contents</a>][<a href="Index.html#Index" title="Index" rel="index">Index</a>]</p>
+</div>
+
+
+
+</body>
+</html>
