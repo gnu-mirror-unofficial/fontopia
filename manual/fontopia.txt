@@ -11,7 +11,7 @@ Index
 fontopia
 ********
 
-This manual is for fontopia - the console font editor (version 1.2).
+This manual is for fontopia - the console font editor (version 1.6).
 
 1 the console font editor
 *************************
@@ -51,9 +51,18 @@ of both versions, as well as CP fonts, BDF files and raw font files.
 1.3 WARNING:
 ============
 
-There is one downside currently: fontopia doesn't work with unicode
-sequences properly (at least not in all cases).  If you export a unicode
-table, edit it, and then import it to another file, you should be safe.
+  1. There is a major downside currently: fontopia doesn't work with
+     unicode sequences properly (at least not in all cases).  If you
+     export a unicode table, edit it, and then import it to a font file,
+     you should be safe.
+  2. Note that if you changed the font version from CP to any other
+     version, only the ACTIVE font will be changed, as the other font
+     formats (PSF, Raw, BDF) don't support multiple fonts inside the
+     same font file.  In this case, you will need to open the original
+     CP file multiple times, every time select a different font size (by
+     using '1'-'4' number keys) and convert to the new font version,
+     then reopen the original CP file, select another font size, convert
+     it, and so on.
 
 1.4 Navigation
 ==============
@@ -94,6 +103,11 @@ Using the editor is very easy:
   27. To flip a glyph vertically, press V.
   28. To export font glyphs in textual format (by default to a file with
      same original file name plus .glyph extension), press W.
+  29. If editing a CP font and you want to change the active font (e.g.
+     edit the 8x8 font instead of the 16x8 font you are currently
+     editing) press any key from '1' to '4' and the respective font will
+     be the active font to be edited.  You can go back and forth by
+     using the number keys.
 
 
    The unicode values that are mapped to a specific glyph are shown on
@@ -551,10 +565,10 @@ Index
 * Menu:
 
 * About fontopia:                        fontopia.            (line  21)
-* Buffer mode:                           fontopia.            (line 107)
+* Buffer mode:                           fontopia.            (line 121)
 * FDL, GNU Free Documentation License:   GNU Free Documentation License.
-                                                              (line 124)
-* Navigation:                            fontopia.            (line  60)
+                                                              (line 138)
+* Navigation:                            fontopia.            (line  69)
 * Supported formats::                    fontopia.            (line  44)
 * the console font editor:               fontopia.            (line  17)
 * WARNING::                              fontopia.            (line  53)

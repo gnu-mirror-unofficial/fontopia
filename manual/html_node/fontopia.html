@@ -1,22 +1,22 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
-<!-- This manual is for fontopia - the console font editor (version 1.2).
+<!-- This manual is for fontopia - the console font editor (version 1.6).
 
 Copyright (C) 2015, 2016 Mohammed Isam.
 
 Permission is granted to copy, distribute and/or modify this document
-under the terms of the GNU Free Documentation License, Version 1.3 or
+under the terms of the GNU Free Documentation License, Version 1.6 or
 any later version published by the Free Software Foundation; with no
 Invariant Sections, with no Front-Cover Texts, and with no Back-Cover
 Texts.  A copy of the license is included in the section entitled
 "GNU Free Documentation License".
  -->
-<!-- Created by GNU Texinfo 6.0, http://www.gnu.org/software/texinfo/ -->
+<!-- Created by GNU Texinfo 6.1, http://www.gnu.org/software/texinfo/ -->
 <head>
-<title>fontopia version 1.2: fontopia</title>
+<title>fontopia version 1.6: fontopia</title>
 
-<meta name="description" content="fontopia version 1.2: fontopia">
-<meta name="keywords" content="fontopia version 1.2: fontopia">
+<meta name="description" content="fontopia version 1.6: fontopia">
+<meta name="keywords" content="fontopia version 1.6: fontopia">
 <meta name="resource-type" content="document">
 <meta name="distribution" content="global">
 <meta name="Generator" content="makeinfo">
@@ -48,9 +48,8 @@ pre.smalldisplay {font-family: inherit; font-size: smaller}
 pre.smallexample {font-size: smaller}
 pre.smallformat {font-family: inherit; font-size: smaller}
 pre.smalllisp {font-size: smaller}
-span.nocodebreak {white-space: nowrap}
 span.nolinebreak {white-space: nowrap}
-span.roman {font-family: serif; font-weight: normal}
+span.roman {font-family: initial; font-weight: normal}
 span.sansserif {font-family: sans-serif; font-weight: normal}
 ul.no-bullet {list-style: none}
 -->
@@ -106,13 +105,24 @@ of both versions, as well as CP fonts, BDF files and raw font files.
 </li><li>- PCF font and Windows FON files support are under development
 </li></ul>
 
+
 <a name="WARNING_003a"></a>
 <h3 class="section">1.3 WARNING:</h3>
 <a name="index-WARNING_003a"></a>
-<p>There is one downside currently: fontopia doesn&rsquo;t work with unicode
+
+<ol>
+<li> There is a major downside currently: fontopia doesn&rsquo;t work with unicode
 sequences properly (at least not in all cases). If you export a unicode
-table, edit it, and then import it to another file, you should be safe.
-</p>
+table, edit it, and then import it to a font file, you should be safe.
+</li><li> Note that if you changed the font version from CP to any other version,
+only the ACTIVE font will be changed, as the other font formats (PSF,
+Raw, BDF) don&rsquo;t support multiple fonts inside the same font file. In this
+case, you will need to open the original CP file multiple times, every
+time select a different font size (by using &rsquo;1&rsquo;-&rsquo;4&rsquo; number keys) and
+convert to the new font version, then reopen the original CP file, select
+another font size, convert it, and so on.
+</li></ol>
+
 
 <a name="Navigation"></a>
 <h3 class="section">1.4 Navigation</h3>
@@ -154,6 +164,11 @@ If font is in BDF format, P shows properties (or metadata).
 </li><li> To flip a glyph vertically, press V.
 </li><li> To export font glyphs in textual format (by default to a file with
 same original file name plus .glyph extension), press W.
+</li><li> If editing a CP font and you want to change the active font (e.g.
+edit the 8x8 font instead of the 16x8 font you are currently editing)
+press any key from &rsquo;1&rsquo; to &rsquo;4&rsquo; and the respective font will be the
+active font to be edited. You can go back and forth by using the
+number keys.
 </li></ol>
 <br>
 
